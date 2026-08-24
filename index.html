@@ -189,57 +189,7 @@
     </div>
   </section>
 
-  <!-- CALCULATOR SECTION -->
-  <section class="py-16 bg-brand-900 text-white" id="calculator">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">UP Subsidy Estimator</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1">Calculate Your Solar Savings</h2>
-        <p class="text-slate-400 text-xs sm:text-sm mt-2">Adjust your average monthly electricity bill to calculate the required plant size, area, and eligible subsidies.</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
-        
-        <!-- Interactive Slider Box -->
-        <div class="lg:col-span-6 bg-brand-800 p-6 sm:p-8 rounded-2xl border border-slate-700 space-y-6">
-          <div class="flex justify-between items-center">
-            <span class="text-sm text-slate-300 font-medium">Monthly Power Bill</span>
-            <span id="bill-label" class="text-2xl font-black text-amber-400">₹3,500</span>
-          </div>
-
-          <input type="range" id="bill-range" min="1000" max="15000" step="500" value="3500" class="w-full h-3 bg-slate-600 rounded-lg appearance-none cursor-pointer accent-amber-400" />
-
-          <div class="flex justify-between text-[11px] text-slate-400 font-medium">
-            <span>₹1,000/mo</span>
-            <span>₹7,500/mo</span>
-            <span>₹15,000+/mo</span>
-          </div>
-
-          <div class="p-4 bg-brand-900/70 rounded-xl border border-slate-700 space-y-2 text-xs">
-            <div class="flex justify-between text-slate-300">
-              <span>Central Subsidy (PM Surya Ghar):</span>
-              <span id="calc-central" class="font-bold text-amber-300">₹78,000</span>
-            </div>
-            <div class="flex justify-between text-slate-300">
-              <span>UP State Subsidy (UPNEDA):</span>
-              <span id="calc-state" class="font-bold text-amber-300">₹30,000</span>
-            </div>
-          </div>
-
-          <a id="calc-whatsapp-btn" href="https://wa.me/918630019376?text=Hi%2C%20my%20bill%20is%20around%203500.%20I%20want%20to%20apply%20for%20a%203kW%20solar%20system." target="_blank" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg text-center flex items-center justify-center gap-2 transition">
-            <i data-lucide="message-circle" class="w-4 h-4"></i> Claim This Subsidy on WhatsApp
-          </a>
-        </div>
-
-        <!-- 2x2 Calculation Grid -->
-        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
-          <div class="bg-brand-800 p-5 rounded-xl border border-slate-700">
-            <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Plant Capacity</div>
-            <div id="calc-kw" class="text-2xl font-black text-amber-400 mt-1">3.0 kW</div>
-            <div class="text-[11px] text-slate-400 mt-0.5">DCR Mono PERC</div>
-          </div>
-
+  <
           <div class="bg-brand-800 p-5 rounded-xl border border-slate-700">
             <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Roof Area Needed</div>
             <div id="calc-area" class="text-2xl font-black text-white mt-1">300 sq.ft</div>
@@ -331,3 +281,206 @@
             <div class="flex items-center gap-2">✓ Customized high-elevation structures</div>
           </div>
           <a hre
+  <!-- STYLES FOR MOBILE TOUCH SLIDER -->
+  <style>
+    /* Custom Slider Styling for Mobile & Desktop */
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #f59e0b;
+      cursor: pointer;
+      border: 3px solid #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    input[type=range]::-moz-range-thumb {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #f59e0b;
+      cursor: pointer;
+      border: 3px solid #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+  </style>
+
+  <!-- CALCULATOR SECTION -->
+  <section class="py-16 bg-brand-900 text-white" id="calculator">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">UP Subsidy Estimator</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1">Calculate Your Solar Savings</h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2">Select or slide your average monthly electricity bill to see your recommended solar plant size and subsidies.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center max-w-5xl mx-auto">
+        
+        <!-- Interactive Slider Box -->
+        <div class="lg:col-span-6 bg-brand-800 p-6 sm:p-8 rounded-2xl border border-slate-700 space-y-6">
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-slate-300 font-medium">Monthly Power Bill</span>
+            <span id="bill-label" class="text-2xl sm:text-3xl font-black text-amber-400">₹3,500</span>
+          </div>
+
+          <!-- Slider with Direct OnInput -->
+          <div class="space-y-3">
+            <input 
+              type="range" 
+              id="bill-range" 
+              min="1000" 
+              max="15000" 
+              step="500" 
+              value="3500" 
+              oninput="calculateSolar(this.value)"
+              onchange="calculateSolar(this.value)"
+              class="w-full h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer touch-none" 
+            />
+
+            <!-- Minus / Plus Touch Controls for Mobile -->
+            <div class="flex items-center justify-between gap-3 pt-1">
+              <button type="button" onclick="adjustBill(-500)" class="flex-1 py-1.5 bg-slate-700 active:bg-amber-500 rounded-lg text-sm font-bold text-slate-200 active:text-brand-900 transition flex items-center justify-center gap-1">
+                <i data-lucide="minus" class="w-4 h-4"></i> ₹500
+              </button>
+              <button type="button" onclick="adjustBill(500)" class="flex-1 py-1.5 bg-slate-700 active:bg-amber-500 rounded-lg text-sm font-bold text-slate-200 active:text-brand-900 transition flex items-center justify-center gap-1">
+                <i data-lucide="plus" class="w-4 h-4"></i> ₹500
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Select Bill Chips -->
+          <div>
+            <div class="text-[11px] text-slate-400 font-semibold mb-2">Quick Select:</div>
+            <div class="grid grid-cols-4 gap-2 text-xs">
+              <button type="button" onclick="setBill(2000)" class="py-1.5 bg-slate-700/70 hover:bg-slate-700 rounded-md font-medium text-slate-200">₹2,000</button>
+              <button type="button" onclick="setBill(3500)" class="py-1.5 bg-slate-700/70 hover:bg-slate-700 rounded-md font-medium text-slate-200">₹3,500</button>
+              <button type="button" onclick="setBill(6000)" class="py-1.5 bg-slate-700/70 hover:bg-slate-700 rounded-md font-medium text-slate-200">₹6,000</button>
+              <button type="button" onclick="setBill(10000)" class="py-1.5 bg-slate-700/70 hover:bg-slate-700 rounded-md font-medium text-slate-200">₹10,000</button>
+            </div>
+          </div>
+
+          <!-- Subsidy Breakdown -->
+          <div class="p-4 bg-brand-900/70 rounded-xl border border-slate-700 space-y-2 text-xs">
+            <div class="flex justify-between text-slate-300">
+              <span>Central Subsidy (PM Surya Ghar):</span>
+              <span id="calc-central" class="font-bold text-amber-300">₹78,000</span>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>UP State Subsidy (UPNEDA):</span>
+              <span id="calc-state" class="font-bold text-amber-300">₹30,000</span>
+            </div>
+          </div>
+
+          <a id="calc-whatsapp-btn" href="https://wa.me/918630019376" target="_blank" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg text-center flex items-center justify-center gap-2 shadow-lg transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> Claim This Subsidy on WhatsApp
+          </a>
+        </div>
+
+        <!-- 2x2 Calculation Grid -->
+        <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+          <div class="bg-brand-800 p-5 rounded-xl border border-slate-700">
+            <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Plant Capacity</div>
+            <div id="calc-kw" class="text-2xl font-black text-amber-400 mt-1">3.0 kW</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">DCR Mono PERC</div>
+          </div>
+
+          <div class="bg-brand-800 p-5 rounded-xl border border-slate-700">
+            <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Roof Area Needed</div>
+            <div id="calc-area" class="text-2xl font-black text-white mt-1">300 sq.ft</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Shadow-free area</div>
+          </div>
+
+          <div class="bg-brand-800 p-5 rounded-xl border border-slate-700">
+            <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Total Subsidy</div>
+            <div id="calc-subsidy" class="text-2xl font-black text-emerald-400 mt-1">₹1,08,000</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Direct DBT credit</div>
+          </div>
+
+          <div class="bg-brand-800 p-5 rounded-xl border border-slate-700">
+            <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Est. Annual Saving</div>
+            <div id="calc-savings" class="text-2xl font-black text-amber-400 mt-1">₹42,000 / yr</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Net generation</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT FUNCTIONS -->
+  <script>
+    function calculateSolar(val) {
+      let bill = parseInt(val, 10);
+      if (isNaN(bill)) bill = 3500;
+
+      const billRange = document.getElementById('bill-range');
+      const billLabel = document.getElementById('bill-label');
+      const calcKw = document.getElementById('calc-kw');
+      const calcArea = document.getElementById('calc-area');
+      const calcSubsidy = document.getElementById('calc-subsidy');
+      const calcSavings = document.getElementById('calc-savings');
+      const calcCentral = document.getElementById('calc-central');
+      const calcState = document.getElementById('calc-state');
+      const calcWhatsappBtn = document.getElementById('calc-whatsapp-btn');
+
+      if (billRange) billRange.value = bill;
+      if (billLabel) billLabel.innerText = '₹' + bill.toLocaleString('en-IN');
+
+      // Solar sizing logic: 1 kW per ~₹1,200 monthly bill
+      let kw = Math.ceil(bill / 1200);
+      if (kw < 1) kw = 1;
+      if (kw > 10) kw = 10;
+
+      let central = 0;
+      let state = 0;
+
+      if (kw === 1) {
+        central = 33000;
+        state = 15000;
+      } else if (kw === 2) {
+        central = 66000;
+        state = 30000;
+      } else {
+        central = 78000;
+        state = 30000;
+      }
+
+      const totalSubsidy = central + state;
+      const annualSavings = kw * 4 * 300 * 7.5; // ~1200 units/kW/year @ avg ₹7.5/unit
+
+      if (calcKw) calcKw.innerText = kw + '.0 kW';
+      if (calcArea) calcArea.innerText = (kw * 100) + ' sq.ft';
+      if (calcCentral) calcCentral.innerText = '₹' + central.toLocaleString('en-IN');
+      if (calcState) calcState.innerText = '₹' + state.toLocaleString('en-IN');
+      if (calcSubsidy) calcSubsidy.innerText = '₹' + totalSubsidy.toLocaleString('en-IN');
+      if (calcSavings) calcSavings.innerText = '₹' + Math.round(annualSavings).toLocaleString('en-IN') + ' / yr';
+
+      if (calcWhatsappBtn) {
+        const msg = encodeURIComponent(`Hi Suryavansh Solar, my average power bill is ₹${bill.toLocaleString('en-IN')}. The website recommends a ${kw} kW plant with ₹${totalSubsidy.toLocaleString('en-IN')} total subsidy. Please share the complete installation quote.`);
+        calcWhatsappBtn.href = `https://wa.me/918630019376?text=${msg}`;
+      }
+    }
+
+    function adjustBill(step) {
+      const range = document.getElementById('bill-range');
+      if (!range) return;
+      let cur = parseInt(range.value, 10) || 3500;
+      let next = cur + step;
+      if (next < 1000) next = 1000;
+      if (next > 15000) next = 15000;
+      calculateSolar(next);
+    }
+
+    function setBill(amount) {
+      calculateSolar(amount);
+    }
+
+    // Initialize on load
+    window.addEventListener('load', function() {
+      calculateSolar(3500);
+      try { if (window.lucide) { lucide.createIcons(); } } catch(e) {}
+    });
+  </script>
+  
