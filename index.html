@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Suryavansh Solar Solutions | PM Surya Ghar Authorized Partner</title>
   <meta name="description" content="Authorized UPNEDA vendor & PM Surya Ghar solar EPC provider in Uttar Pradesh. High efficiency on-grid, hybrid, and commercial solar installations." />
 
@@ -27,15 +27,17 @@
   </script>
 
   <style>
-    /* Mobile-first touch slider styling */
+    /* Mobile-first slider styling */
     input[type=range] {
       -webkit-appearance: none;
+      appearance: none;
       width: 100%;
-      height: 12px;
+      height: 14px;
       background: #334155;
-      border-radius: 6px;
+      border-radius: 7px;
       outline: none;
-      margin: 12px 0;
+      margin: 15px 0;
+      touch-action: pan-y;
     }
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -46,7 +48,7 @@
       background: #f59e0b;
       cursor: pointer;
       border: 3px solid #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
     input[type=range]::-moz-range-thumb {
       width: 32px;
@@ -55,7 +57,7 @@
       background: #f59e0b;
       cursor: pointer;
       border: 3px solid #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
   </style>
 
@@ -109,19 +111,19 @@
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button type="button" onclick="toggleMenu()" class="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg text-lg font-bold">
+        <button type="button" id="menu-toggle-btn" class="md:hidden p-2.5 text-slate-700 active:bg-slate-200 rounded-lg text-xl font-bold cursor-pointer">
           ☰
         </button>
       </div>
 
       <!-- Mobile Dropdown -->
       <div id="mobile-menu" class="hidden md:hidden py-3 border-t border-slate-100 flex flex-col gap-2.5 text-sm">
-        <a href="#calculator" onclick="toggleMenu()" class="px-2 py-1 text-slate-800 font-medium">Subsidy Calculator</a>
-        <a href="#products" onclick="toggleMenu()" class="px-2 py-1 text-slate-800 font-medium">Our Products</a>
-        <a href="/blog.html" class="px-2 py-1 text-amber-600 font-bold">Subsidy Guide 📖</a>
-        <a href="#contact" onclick="toggleMenu()" class="px-2 py-1 text-slate-800 font-medium">Contact Details</a>
-        <a href="/admin/" class="px-2 py-1 text-slate-800 font-medium">CMS Admin Login</a>
-        <a href="https://wa.me/918630019376" target="_blank" class="text-center py-2 bg-amber-500 text-white font-bold rounded-lg mt-1">Book Site Survey</a>
+        <a href="#calculator" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">Subsidy Calculator</a>
+        <a href="#products" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">Our Products</a>
+        <a href="/blog.html" class="mobile-nav-link px-2 py-1 text-amber-600 font-bold">Subsidy Guide 📖</a>
+        <a href="#contact" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">Contact Details</a>
+        <a href="/admin/" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">CMS Admin Login</a>
+        <a href="https://wa.me/918630019376" target="_blank" class="text-center py-2.5 bg-amber-500 text-white font-bold rounded-lg mt-1">Book Site Survey</a>
       </div>
     </div>
   </header>
@@ -167,7 +169,7 @@
             <h3 class="text-base sm:text-lg font-bold text-brand-900 mb-1">Book Free Site Survey</h3>
             <p class="text-xs text-slate-500 mb-4">Enter details to chat instantly with our technical engineers on WhatsApp.</p>
 
-            <form onsubmit="handleHeroSubmit(event)" class="space-y-3">
+            <form id="hero-lead-form" class="space-y-3">
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
                 <input type="text" id="lead-name" required placeholder="Enter your full name" class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400" />
@@ -193,7 +195,7 @@
                 </select>
               </div>
 
-              <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition">
+              <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition cursor-pointer">
                 Submit & Open on WhatsApp 💬
               </button>
             </form>
@@ -223,7 +225,7 @@
             <span id="bill-label" class="text-2xl sm:text-3xl font-black text-amber-400">₹3,500</span>
           </div>
 
-          <!-- Native Slider with Direct Inline Handlers -->
+          <!-- Native Slider -->
           <div>
             <input 
               type="range" 
@@ -232,30 +234,28 @@
               max="15000" 
               step="500" 
               value="3500" 
-              oninput="runCalculator(this.value)"
-              onchange="runCalculator(this.value)"
               class="w-full cursor-pointer" 
             />
           </div>
 
-          <!-- Tap Increment / Decrement Steppers -->
+          <!-- Tap Stepper Buttons -->
           <div class="flex items-center gap-2">
-            <button type="button" onclick="stepCalculator(-500)" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition">
+            <button type="button" id="btn-minus" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition cursor-pointer">
               − ₹500
             </button>
-            <button type="button" onclick="stepCalculator(500)" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition">
+            <button type="button" id="btn-plus" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition cursor-pointer">
               + ₹500
             </button>
           </div>
 
-          <!-- Quick Select Buttons -->
+          <!-- Quick Select Preset Buttons -->
           <div class="pt-1">
             <div class="text-[10px] text-slate-400 uppercase font-semibold mb-1.5">Quick Presets:</div>
             <div class="grid grid-cols-4 gap-1.5">
-              <button type="button" onclick="runCalculator(2000)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹2,000</button>
-              <button type="button" onclick="runCalculator(3500)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹3,500</button>
-              <button type="button" onclick="runCalculator(6000)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹6,000</button>
-              <button type="button" onclick="runCalculator(10000)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹10,000</button>
+              <button type="button" data-val="2000" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹2,000</button>
+              <button type="button" data-val="3500" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹3,500</button>
+              <button type="button" data-val="6000" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹6,000</button>
+              <button type="button" data-val="10000" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹10,000</button>
             </div>
           </div>
 
@@ -276,7 +276,7 @@
           </a>
         </div>
 
-        <!-- Metric Cards 2x2 Grid -->
+        <!-- Metric Cards Grid -->
         <div class="lg:col-span-6 grid grid-cols-2 gap-3">
           <div class="bg-brand-800 p-4 rounded-xl border border-slate-700">
             <div class="text-[10px] text-slate-400 uppercase font-bold">Plant Capacity</div>
@@ -298,7 +298,7 @@
 
           <div class="bg-brand-800 p-4 rounded-xl border border-slate-700">
             <div class="text-[10px] text-slate-400 uppercase font-bold">Annual Saving</div>
-            <div id="calc-savings" class="text-xl sm:text-2xl font-black text-amber-400 mt-1">₹42,000 / yr</div>
+            <div id="calc-savings" class="text-xl sm:text-2xl font-black text-amber-400 mt-1">₹39,900 / yr</div>
             <div class="text-[10px] text-slate-400">Est. generation</div>
           </div>
         </div>
@@ -369,4 +369,4 @@
           <p class="text-xs text-slate-600 leading-relaxed flex-grow">
             Tailored for factories, cold storages, petrol pumps, schools, and hospitals across Uttar Pradesh.
           </p>
-          <div class="bor
+          <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5
