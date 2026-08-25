@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suryavansh Solar Solutions | PM Surya Ghar Authorized Partner</title>
   <meta name="description" content="Authorized UPNEDA vendor & PM Surya Ghar solar EPC provider in Uttar Pradesh. High efficiency on-grid, hybrid, and commercial solar installations." />
 
@@ -27,42 +27,40 @@
   </script>
 
   <style>
-    /* Mobile-first slider styling */
-    input[type=range] {
+    /* Native Touch Friendly Range Slider */
+    .slider-input {
       -webkit-appearance: none;
+      -moz-appearance: none;
       appearance: none;
       width: 100%;
-      height: 14px;
+      height: 16px;
       background: #334155;
-      border-radius: 7px;
+      border-radius: 8px;
       outline: none;
-      margin: 15px 0;
-      touch-action: pan-y;
+      margin: 16px 0;
+      cursor: pointer;
     }
-    input[type=range]::-webkit-slider-thumb {
+    .slider-input::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       background: #f59e0b;
-      cursor: pointer;
+      cursor: grab;
       border: 3px solid #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
-    input[type=range]::-moz-range-thumb {
-      width: 32px;
-      height: 32px;
+    .slider-input::-moz-range-thumb {
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       background: #f59e0b;
-      cursor: pointer;
+      cursor: grab;
       border: 3px solid #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
   </style>
-
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased font-sans flex flex-col min-h-screen">
 
@@ -110,19 +108,19 @@
           </a>
         </nav>
 
-        <!-- Mobile Menu Button -->
-        <button type="button" id="menu-toggle-btn" class="md:hidden p-2.5 text-slate-700 active:bg-slate-200 rounded-lg text-xl font-bold cursor-pointer">
+        <!-- Mobile Menu Button with Inline JS -->
+        <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden p-2.5 bg-slate-100 active:bg-slate-200 text-slate-800 rounded-lg text-xl font-black">
           ☰
         </button>
       </div>
 
       <!-- Mobile Dropdown -->
-      <div id="mobile-menu" class="hidden md:hidden py-3 border-t border-slate-100 flex flex-col gap-2.5 text-sm">
-        <a href="#calculator" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">Subsidy Calculator</a>
-        <a href="#products" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">Our Products</a>
-        <a href="/blog.html" class="mobile-nav-link px-2 py-1 text-amber-600 font-bold">Subsidy Guide 📖</a>
-        <a href="#contact" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">Contact Details</a>
-        <a href="/admin/" class="mobile-nav-link px-2 py-1 text-slate-800 font-medium">CMS Admin Login</a>
+      <div id="mobile-menu" class="hidden md:hidden py-3 border-t border-slate-100 flex flex-col gap-2.5 text-sm bg-white">
+        <a href="#calculator" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="px-2 py-1 text-slate-800 font-medium">Subsidy Calculator</a>
+        <a href="#products" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="px-2 py-1 text-slate-800 font-medium">Our Products</a>
+        <a href="/blog.html" class="px-2 py-1 text-amber-600 font-bold">Subsidy Guide 📖</a>
+        <a href="#contact" onclick="document.getElementById('mobile-menu').classList.add('hidden')" class="px-2 py-1 text-slate-800 font-medium">Contact Details</a>
+        <a href="/admin/" class="px-2 py-1 text-slate-800 font-medium">CMS Admin Login</a>
         <a href="https://wa.me/918630019376" target="_blank" class="text-center py-2.5 bg-amber-500 text-white font-bold rounded-lg mt-1">Book Site Survey</a>
       </div>
     </div>
@@ -169,7 +167,7 @@
             <h3 class="text-base sm:text-lg font-bold text-brand-900 mb-1">Book Free Site Survey</h3>
             <p class="text-xs text-slate-500 mb-4">Enter details to chat instantly with our technical engineers on WhatsApp.</p>
 
-            <form id="hero-lead-form" class="space-y-3">
+            <form onsubmit="sendFormToWhatsApp(event)" class="space-y-3">
               <div>
                 <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
                 <input type="text" id="lead-name" required placeholder="Enter your full name" class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400" />
@@ -195,7 +193,7 @@
                 </select>
               </div>
 
-              <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition cursor-pointer">
+              <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition">
                 Submit & Open on WhatsApp 💬
               </button>
             </form>
@@ -225,7 +223,7 @@
             <span id="bill-label" class="text-2xl sm:text-3xl font-black text-amber-400">₹3,500</span>
           </div>
 
-          <!-- Native Slider -->
+          <!-- Direct Native Trigger Slider -->
           <div>
             <input 
               type="range" 
@@ -234,28 +232,30 @@
               max="15000" 
               step="500" 
               value="3500" 
-              class="w-full cursor-pointer" 
+              oninput="calcUpdate(this.value)"
+              onchange="calcUpdate(this.value)"
+              class="slider-input" 
             />
           </div>
 
-          <!-- Tap Stepper Buttons -->
+          <!-- Stepper Buttons with Direct Onclick -->
           <div class="flex items-center gap-2">
-            <button type="button" id="btn-minus" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition cursor-pointer">
+            <button type="button" onclick="calcStep(-500)" class="flex-1 py-3 bg-slate-700 active:bg-amber-500 rounded-lg text-sm font-bold text-slate-100 transition">
               − ₹500
             </button>
-            <button type="button" id="btn-plus" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition cursor-pointer">
+            <button type="button" onclick="calcStep(500)" class="flex-1 py-3 bg-slate-700 active:bg-amber-500 rounded-lg text-sm font-bold text-slate-100 transition">
               + ₹500
             </button>
           </div>
 
-          <!-- Quick Select Preset Buttons -->
+          <!-- Quick Presets -->
           <div class="pt-1">
             <div class="text-[10px] text-slate-400 uppercase font-semibold mb-1.5">Quick Presets:</div>
             <div class="grid grid-cols-4 gap-1.5">
-              <button type="button" data-val="2000" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹2,000</button>
-              <button type="button" data-val="3500" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹3,500</button>
-              <button type="button" data-val="6000" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹6,000</button>
-              <button type="button" data-val="10000" class="preset-btn py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹10,000</button>
+              <button type="button" onclick="calcUpdate(2000)" class="py-2.5 bg-slate-700 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹2,000</button>
+              <button type="button" onclick="calcUpdate(3500)" class="py-2.5 bg-slate-700 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹3,500</button>
+              <button type="button" onclick="calcUpdate(6000)" class="py-2.5 bg-slate-700 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹6,000</button>
+              <button type="button" onclick="calcUpdate(10000)" class="py-2.5 bg-slate-700 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹10,000</button>
             </div>
           </div>
 
@@ -310,7 +310,6 @@
   <!-- PRODUCTS SECTION -->
   <section class="py-14 bg-white" id="products">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
       <div class="text-center max-w-xl mx-auto mb-10">
         <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">Engineered Range</span>
         <h2 class="text-2xl font-extrabold text-brand-900 mt-1">Our Solar Products & Services</h2>
@@ -318,55 +317,40 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Product 1 -->
         <div class="flex flex-col bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">
-            🏠
-          </div>
+          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">🏠</div>
           <h3 class="text-base font-bold text-brand-900 mb-0.5">On-Grid Rooftop Systems</h3>
           <span class="text-[11px] font-semibold text-amber-600 mb-2">1 kW to 10 kW Residential</span>
-          <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-            Syncs with the local grid. Excess power is exported through bi-directional Net Metering to offset monthly electricity bills.
-          </p>
+          <p class="text-xs text-slate-600 leading-relaxed flex-grow">Syncs with local grid. Excess power is exported through bi-directional Net Metering to offset electricity bills.</p>
           <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5 text-xs text-slate-700">
             <div>✓ Eligible for up to ₹1,08,000 subsidy</div>
             <div>✓ 25-Year linear panel warranty</div>
             <div>✓ Zero battery maintenance required</div>
           </div>
-          <a href="https://wa.me/918630019376?text=I%20am%20interested%20in%20an%20On-Grid%20Rooftop%20Solar%20System." target="_blank" class="mt-4 block w-full text-center py-2 bg-brand-900 hover:bg-brand-800 text-white text-xs font-bold rounded-lg transition">
-            Inquire for On-Grid
-          </a>
+          <a href="https://wa.me/918630019376?text=I%20am%20interested%20in%20an%20On-Grid%20Rooftop%20Solar%20System." target="_blank" class="mt-4 block w-full text-center py-2 bg-brand-900 hover:bg-brand-800 text-white text-xs font-bold rounded-lg transition">Inquire for On-Grid</a>
         </div>
 
-        <!-- Product 2 -->
         <div class="flex flex-col bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">
-            🔋
-          </div>
+          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">🔋</div>
           <h3 class="text-base font-bold text-brand-900 mb-0.5">Hybrid & Off-Grid Solar</h3>
           <span class="text-[11px] font-semibold text-amber-600 mb-2">Lithium / Tubular Storage</span>
-          <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-            Combines rooftop solar power with heavy-duty battery storage to provide uninterrupted power during grid outages.
-          </p>
+          <p class="text-xs text-slate-600 leading-relaxed flex-grow">Combines rooftop solar power with battery storage for uninterrupted power during cuts.</p>
           <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5 text-xs text-slate-700">
             <div>✓ 100% protection from power cuts</div>
             <div>✓ Smart MPPT hybrid solar inverters</div>
             <div>✓ Prioritizes solar over grid & battery</div>
           </div>
-          <a href="https://wa.me/919548782862?text=I%20am%20interested%20in%20a%20Hybrid%20Off-Grid%20Solar%20System." target="_blank" class="mt-4 block w-full text-center py-2 bg-brand-900 hover:bg-brand-800 text-white text-xs font-bold rounded-lg transition">
-            Inquire for Hybrid
-          </a>
+          <a href="https://wa.me/919548782862?text=I%20am%20interested%20in%20a%20Hybrid%20Off-Grid%20Solar%20System." target="_blank" class="mt-4 block w-full text-center py-2 bg-brand-900 hover:bg-brand-800 text-white text-xs font-bold rounded-lg transition">Inquire for Hybrid</a>
         </div>
 
-        <!-- Product 3 -->
         <div class="flex flex-col bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">
-            🏭
-          </div>
+          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">🏭</div>
           <h3 class="text-base font-bold text-brand-900 mb-0.5">Commercial & MSME EPC</h3>
           <span class="text-[11px] font-semibold text-amber-600 mb-2">10 kW to 500 kW Plants</span>
-          <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-            Tailored for factories, cold storages, petrol pumps, schools, and hospitals across Uttar Pradesh.
-          </p>
-          <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5
+          <p class="text-xs text-slate-600 leading-relaxed flex-grow">Tailored for factories, cold storages, petrol pumps, schools, and hospitals across Uttar Pradesh.</p>
+          <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5 text-xs text-slate-700">
+            <div>✓ 40% accelerated tax depreciation</div>
+            <div>✓ Complete DISCOM net metering support</div>
+            <div>✓ High ROI within 3 to 4 years</div>
+          </div>
+          <a href="https://wa.me/918630019376?text=I%20am%20interested%20in%20Commercial%20Sol
