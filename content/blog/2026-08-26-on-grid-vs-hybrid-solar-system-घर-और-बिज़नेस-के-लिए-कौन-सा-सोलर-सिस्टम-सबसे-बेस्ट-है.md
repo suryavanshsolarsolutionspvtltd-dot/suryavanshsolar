@@ -2,7 +2,7 @@
 title: "On-Grid vs Hybrid Solar System: घर और बिज़नेस के लिए कौन सा सोलर सिस्टम
   सबसे बेस्ट है?"
 date: 2026-08-26T23:27:00.000+05:30
-category: Technical Guides
+category: UP Schemes
 description: >
   On-grid और Hybrid solar systems में क्या अंतर है? जानिए इनके features, battery
   backup capability, cost difference और PM Surya Ghar subsidy eligibility की
