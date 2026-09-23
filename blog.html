@@ -3,41 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suryavansh Solar - Blog</title>
+  <title>Solar Knowledge Hub | Suryavansh Solar</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Markdown & YAML Parser -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-top: 1.75rem; margin-bottom: 0.75rem; border-left: 4px solid #f59e0b; padding-left: 0.75rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; color: #374151; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+    .prose p { margin-bottom: 1rem; line-height: 1.75; color: #4b5563; }
+    .prose ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1rem; color: #4b5563; }
+    .prose li { margin-bottom: 0.35rem; }
+    .prose img { border-radius: 1rem; margin: 1.5rem auto; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+    .prose table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
+    .prose th, .prose td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
+    .prose th { background-color: #f9fafb; font-weight: 600; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans min-h-screen">
+<body class="bg-[#F8FAFC] text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
-  <!-- Top Navbar -->
-  <header class="bg-white border-b sticky top-0 z-50 py-4 px-6">
-    <div class="max-w-4xl mx-auto flex justify-between items-center">
-      <a href="/" class="text-xl font-bold text-amber-600 tracking-wide">Suryavansh Solar</a>
-      <a href="/blog.html" class="text-sm font-semibold text-gray-600 hover:text-amber-600">All Blogs</a>
-    </div>
-  </header>
-
-  <!-- Main Content Area -->
-  <main class="max-w-4xl mx-auto px-4 py-8">
-    <div id="loading" class="text-center py-16 text-gray-500 font-medium">Blogs load ho rahe hain...</div>
-
-    <!-- Blog Posts List View -->
-    <div id="blog-list-view" class="hidden">
-      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 border-b pb-4">Solar Knowledge & Updates</h1>
-      <div id="posts-container" class="grid gap-6 md:grid-cols-2"></div>
-    </div>
-
-    <!-- Single Blog Post Full View -->
-    <article id="blog-post-view" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200">
-      <a href="/blog.html" class="inline-flex items-center text-sm font-bold text-amber-600 hover:underline mb-6">
-        ← Back to all blogs
+  <!-- Top Navigation -->
+  <nav class="bg-white/80 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="w-9 h-9 rounded-xl bg-amber-500 flex items-center justify-center text-white font-black text-lg shadow-md shadow-amber-500/20 group-hover:scale-105 transition">☀️</span>
+        <span class="font-extrabold text-lg sm:text-xl tracking-tight text-slate-900">Suryavansh<span class="text-amber-500">Solar</span></span>
       </a>
-      <h1 id="post-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-3"></h1>
-      <p id="post-date" class="text-xs font-semibold text-gray-400 mb-6 uppercase tracking-wider"></p>
-      <div id="post-content" class="prose max-w-none text-gray-700 leading-relaxed space-y-4"></div>
+      <div class="flex items-center gap-3">
+        <a href="/blog.html" class="text-xs sm:text-sm font-semibold text-slate-600 hover:text-amber-600 transition px-3 py-1.5 rounded-lg hover:bg-slate-50">All Articles</a>
+        <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20mujhe%20rooftop%20solar%20ke%20liye%20survey%20karwana%20hai" target="_blank" class="text-xs sm:text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-white px-3.5 py-2 rounded-xl shadow-sm transition flex items-center gap-1.5">
+          <span>Free Survey</span> ↗
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content Container -->
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full flex-grow">
+    
+    <!-- Loading Animation -->
+    <div id="loading" class="text-center py-24">
+      <div class="inline-block animate-spin w-8 h-8 border-4 border-amber-500 border-t-transparent rounded-full mb-3"></div>
+      <p class="text-slate-500 text-sm font-medium">Articles load ho rahe hain...</p>
+    </div>
+
+    <!-- 1. BLOG LIST VIEW -->
+    <div id="blog-list-view" class="hidden">
+      <!-- Hero Banner -->
+      <div class="mb-10 text-center sm:text-left sm:flex items-end justify-between border-b border-slate-200/80 pb-8">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/60 text-amber-700 text-xs font-semibold mb-3">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span> PM Surya Ghar & UP Solar Insights
+          </div>
+          <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Solar Knowledge Hub</h1>
+          <p class="text-slate-500 text-sm sm:text-base mt-2 max-w-2xl">UP me Solar Subsidy, On-Grid vs Hybrid Systems, aur Net Metering se judi step-by-step jankari.</p>
+        </div>
+      </div>
+
+      <!-- Articles Grid -->
+      <div id="posts-container" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+
+    <!-- 2. SINGLE BLOG POST VIEW -->
+    <article id="blog-post-view" class="hidden max-w-3xl mx-auto">
+      <a href="/blog.html" class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-amber-600 uppercase tracking-wider mb-6 transition">
+        ← Back to all guides
+      </a>
+
+      <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-100 shadow-xl shadow-slate-200/40">
+        <div class="flex items-center gap-3 text-xs font-semibold mb-4">
+          <span class="bg-amber-100/70 text-amber-800 px-2.5 py-1 rounded-full">UP Solar Guide</span>
+          <span id="post-date" class="text-slate-400"></span>
+        </div>
+
+        <h1 id="post-title" class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6"></h1>
+        
+        <div id="post-content" class="prose max-w-none text-slate-600"></div>
+
+        <!-- Sticky WhatsApp Survey Box at Post End -->
+        <div class="mt-10 p-6 rounded-2xl bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200/70 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h4 class="font-bold text-slate-900 text-base">Apne Ghar Par Solar Lagwayein & Bill Zero Karein</h4>
+            <p class="text-xs text-slate-600 mt-1">UPNEDA Empanelled EPC Partner se Free Site Survey aur Quotation paayein.</p>
+          </div>
+          <a href="https://wa.me/91XXXXXXXXXX?text=Namaste,%20mujhe%20site%20survey%20karwana%20hai" target="_blank" class="whitespace-nowrap px-5 py-2.5 rounded-xl bg-green-600 hover:bg-green-700 text-white font-bold text-xs shadow-md shadow-green-600/20 transition flex items-center gap-2">
+            <span>WhatsApp Par Baat Karein</span> ↗
+          </a>
+        </div>
+      </div>
     </article>
   </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-400 mt-12">
+    © 2026 Suryavansh Solar Solutions Private Limited. All rights reserved.
+  </footer>
 
   <script>
     const REPO_OWNER = 'suryavanshsolarsolutionspvtltd-dot';
@@ -78,24 +144,48 @@
           const files = await res.json();
 
           const mdFiles = files.filter(f => f.name.endsWith('.md'));
-          const container = document.getElementById('posts-container');
-
+          
+          const posts = [];
           for (const file of mdFiles) {
             const fileDataRes = await fetch(file.download_url);
             const fileRaw = await fileDataRes.text();
             const { meta } = parseMarkdownWithMeta(fileRaw);
+            posts.push({
+              file: file,
+              meta: meta,
+              date: meta.date ? new Date(meta.date).getTime() : 0
+            });
+          }
 
+          // Latest post first sorting
+          posts.sort((a, b) => b.date - a.date);
+
+          const container = document.getElementById('posts-container');
+          container.innerHTML = '';
+
+          for (const post of posts) {
+            const formattedDate = post.meta.date ? new Date(post.meta.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Recent';
             const card = document.createElement('div');
-            card.className = "bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col justify-between";
+            card.className = "group bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between";
             card.innerHTML = `
               <div>
-                <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-2 py-1 rounded-md">UP Solar</span>
-                <h2 class="text-lg font-bold text-gray-900 mt-3 mb-2 line-clamp-2">${meta.title || file.name}</h2>
-                <p class="text-sm text-gray-500 line-clamp-3 mb-4">${meta.excerpt || 'Poora article padhne ke liye click karein.'}</p>
+                <div class="flex items-center justify-between gap-2 mb-3">
+                  <span class="text-[11px] font-bold text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200/50">☀️ Solar Guide</span>
+                  <span class="text-[11px] font-medium text-slate-400">${formattedDate}</span>
+                </div>
+                <h2 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-2 leading-snug">
+                  ${post.meta.title || post.file.name}
+                </h2>
+                <p class="text-xs sm:text-sm text-slate-500 line-clamp-3 mt-2.5 leading-relaxed font-normal">
+                  ${post.meta.excerpt || 'Poori jankari aur step-by-step guide padhne ke liye article kholein.'}
+                </p>
               </div>
-              <a href="/blog.html?post=${encodeURIComponent(file.name)}" class="text-amber-600 font-bold text-sm hover:underline inline-flex items-center">
-                Read Article →
-              </a>
+              <div class="pt-5 mt-4 border-t border-slate-100 flex items-center justify-between">
+                <span class="text-xs font-semibold text-slate-400">3 min read</span>
+                <a href="/blog.html?post=${encodeURIComponent(post.file.name)}" class="text-xs font-bold text-amber-600 group-hover:text-amber-700 flex items-center gap-1">
+                  Padhein <span>→</span>
+                </a>
+              </div>
             `;
             container.appendChild(card);
           }
@@ -104,7 +194,7 @@
           document.getElementById('blog-list-view').classList.remove('hidden');
         }
       } catch (err) {
-        document.getElementById('loading').innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
+        document.getElementById('loading').innerHTML = `<p class="text-red-500 text-sm font-semibold">Error: ${err.message}</p>`;
       }
     }
 
