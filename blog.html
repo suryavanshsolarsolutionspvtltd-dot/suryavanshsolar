@@ -3,166 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UP Solar Subsidy 2026: 3kW Rooftop Solar Plant par ₹1,08,000 ki Subsidy</title>
-  <meta name="description" content="Uttar Pradesh me PM Surya Ghar aur UPNEDA scheme ke tahat 3kW rooftop solar plant par payein ₹1,08,000 tak ki direct subsidy." />
-  
+  <title>Suryavansh Solar - Blog</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml/dist/js-yaml.min.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen">
 
-  <!-- TOP BAR -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+  <!-- Top Navbar -->
+  <header class="bg-white border-b sticky top-0 z-50 py-4 px-6">
     <div class="max-w-4xl mx-auto flex justify-between items-center">
-      <span class="text-emerald-400 font-bold">● UPNEDA Empanelled | PM Surya Ghar</span>
-      <a href="https://wa.me/918630019376" target="_blank" class="text-amber-400 font-bold">💬 WhatsApp Support</a>
-    </div>
-  </div>
-
-  <!-- NAVIGATION -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 h-16 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-2.5">
-        <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-900 font-black text-base">S</div>
-        <div>
-          <div class="text-sm font-extrabold text-slate-900 leading-none">SURYAVANSH</div>
-          <div class="text-[9px] font-bold text-amber-600 tracking-wider">SOLAR SOLUTIONS</div>
-        </div>
-      </a>
-      <a href="/" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-lg transition">
-        ← Home
-      </a>
+      <a href="/" class="text-xl font-bold text-amber-600 tracking-wide">Suryavansh Solar</a>
+      <a href="/blog.html" class="text-sm font-semibold text-gray-600 hover:text-amber-600">All Blogs</a>
     </div>
   </header>
 
-  <!-- BLOG ARTICLE CONTAINER -->
-  <main class="max-w-3xl mx-auto px-4 py-8 flex-grow">
-    
-    <div class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-8 shadow-sm space-y-6">
-      
-      <!-- Post Meta -->
-      <div class="space-y-2">
-        <span class="inline-block px-2.5 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full">
-          UP Government Schemes
-        </span>
-        <h1 class="text-xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
-          UP Solar Subsidy 2026: 3kW Rooftop Solar Plant par ₹1,08,000 ki Subsidy Kaise Paayein?
-        </h1>
-        <p class="text-xs text-slate-400 font-medium">Published: August 2026 | Verified for Uttar Pradesh DISCOMs</p>
-      </div>
+  <!-- Main Content Area -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+    <div id="loading" class="text-center py-16 text-gray-500 font-medium">Blogs load ho rahe hain...</div>
 
-      <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-        Agar aapka monthly electricity bill <strong>₹3,000 se ₹6,000</strong> ke beech aata hai, toh rooftop solar system lagwana sabse profitable investment hai. Uttar Pradesh me <strong>PM Surya Ghar: Muft Bijli Yojana</strong> aur <strong>UPNEDA State Subsidy</strong> ko milakar 3kW system par total <strong>₹1,08,000</strong> tak ki direct subsidy mil rahi hai.
-      </p>
-
-      <!-- Highlight Box -->
-      <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-xl">
-        <p class="text-xs sm:text-sm text-emerald-900 leading-relaxed font-medium">
-          💡 <strong>Key Highlight:</strong> 3kW system par Central Government se ₹78,000 aur UP State Government se ₹30,000 ki direct subsidy (DBT) aapke bank account me credit hoti hai.
-        </p>
-      </div>
-
-      <!-- Table Section -->
-      <div class="space-y-3 pt-2">
-        <h2 class="text-lg font-bold text-slate-900">1. 3kW Solar Plant Cost & Subsidy Table</h2>
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs sm:text-sm border border-slate-200 rounded-lg overflow-hidden">
-            <thead class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
-              <tr>
-                <th class="p-2.5">Capacity</th>
-                <th class="p-2.5">Central Subsidy</th>
-                <th class="p-2.5">UP Subsidy</th>
-                <th class="p-2.5">Total Subsidy</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100 text-slate-700">
-              <tr>
-                <td class="p-2.5 font-bold">1 kW</td>
-                <td class="p-2.5">₹30,000</td>
-                <td class="p-2.5">₹15,000</td>
-                <td class="p-2.5 font-bold text-emerald-600">₹45,000</td>
-              </tr>
-              <tr>
-                <td class="p-2.5 font-bold">2 kW</td>
-                <td class="p-2.5">₹60,000</td>
-                <td class="p-2.5">₹30,000</td>
-                <td class="p-2.5 font-bold text-emerald-600">₹90,000</td>
-              </tr>
-              <tr class="bg-amber-50/50">
-                <td class="p-2.5 font-bold text-slate-900">3 kW</td>
-                <td class="p-2.5">₹78,000</td>
-                <td class="p-2.5">₹30,000</td>
-                <td class="p-2.5 font-bold text-emerald-600">₹1,08,000</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Step Cards -->
-      <div class="space-y-3 pt-2">
-        <h2 class="text-lg font-bold text-slate-900">2. Step-by-Step Application Process</h2>
-        
-        <div class="space-y-2.5">
-          <div class="p-3.5 bg-slate-50 border-l-4 border-blue-600 rounded-r-lg">
-            <h3 class="font-bold text-slate-900 text-sm mb-1">1. National Portal Registration</h3>
-            <p class="text-xs text-slate-600">pmsuryaghar.gov.in par jayein, UP DISCOM (PVVNL, DVVNL, MVVNL, PuVVNL) select karke Consumer Number enter karein.</p>
-          </div>
-
-          <div class="p-3.5 bg-slate-50 border-l-4 border-amber-500 rounded-r-lg">
-            <h3 class="font-bold text-slate-900 text-sm mb-1">2. Vendor Selection</h3>
-            <p class="text-xs text-slate-600">Feasibility approval aane ke baad UPNEDA empanelled solar vendor choose karein.</p>
-          </div>
-
-          <div class="p-3.5 bg-slate-50 border-l-4 border-teal-600 rounded-r-lg">
-            <h3 class="font-bold text-slate-900 text-sm mb-1">3. Installation & Net Metering</h3>
-            <p class="text-xs text-slate-600">DCR Mono PERC panels aur inverter lagne ke baad DISCOM bi-directional net meter install karega.</p>
-          </div>
-
-          <div class="p-3.5 bg-slate-50 border-l-4 border-emerald-600 rounded-r-lg">
-            <h3 class="font-bold text-slate-900 text-sm mb-1">4. Commissioning & Subsidy Credit</h3>
-            <p class="text-xs text-slate-600">Commissioning certificate ke baad 30 din me total subsidy DBT ke dwara direct bank account me aa jati hai.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQs -->
-      <div class="space-y-3 pt-2">
-        <h2 class="text-lg font-bold text-slate-900">3. Frequently Asked Questions (FAQs)</h2>
-        
-        <div class="space-y-2 text-xs sm:text-sm">
-          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-            <p class="font-bold text-slate-900 mb-1">❓ Kya subsidy ke liye specific panels lagwana zaroori hai?</p>
-            <p class="text-slate-600">Haan, PM Surya Ghar rules ke mutabiq sirf <strong>DCR-compliant (Made in India)</strong> panels par hi subsidy valid hoti hai.</p>
-          </div>
-
-          <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200">
-            <p class="font-bold text-slate-900 mb-1">❓ State subsidy (UPNEDA) ke liye alag se form bharna padega?</p>
-            <p class="text-slate-600">Nahi, National Portal par apply karne par Central aur State dono subsidies ek sath process ho jati hain.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- CTA Box -->
-      <div class="text-center p-6 bg-gradient-to-tr from-amber-50 to-emerald-50 rounded-2xl border border-amber-200/60 mt-6">
-        <h3 class="font-extrabold text-slate-900 text-base mb-1">Apne Ghar Par Solar Lagwayein & Bill Zero Karein</h3>
-        <p class="text-xs text-slate-600 mb-4">Empanelled EPC Partner se Free Site Survey aur Quotation paayein.</p>
-        <a href="https://wa.me/918630019376?text=Hi%20Suryavansh%20Solar%2C%20I%20read%20your%203kW%20subsidy%20guide%20and%20want%20to%20book%20a%20site%20survey." target="_blank" class="inline-block px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-lg shadow transition">
-          Book Free Site Survey on WhatsApp 💬
-        </a>
-      </div>
-
+    <!-- Blog Posts List View -->
+    <div id="blog-list-view" class="hidden">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6 border-b pb-4">Solar Knowledge & Updates</h1>
+      <div id="posts-container" class="grid gap-6 md:grid-cols-2"></div>
     </div>
 
+    <!-- Single Blog Post Full View -->
+    <article id="blog-post-view" class="hidden bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200">
+      <a href="/blog.html" class="inline-flex items-center text-sm font-bold text-amber-600 hover:underline mb-6">
+        ← Back to all blogs
+      </a>
+      <h1 id="post-title" class="text-2xl md:text-3xl font-bold text-gray-900 mb-3"></h1>
+      <p id="post-date" class="text-xs font-semibold text-gray-400 mb-6 uppercase tracking-wider"></p>
+      <div id="post-content" class="prose max-w-none text-gray-700 leading-relaxed space-y-4"></div>
+    </article>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-900 text-slate-400 text-xs py-6 text-center">
-    <div>© 2026 Suryavansh Solar Solutions Private Limited. All rights reserved.</div>
-  </footer>
+  <script>
+    const REPO_OWNER = 'suryavanshsolarsolutionspvtltd-dot';
+    const REPO_NAME = 'suryavanshsolar';
+    const BRANCH = 'main';
 
+    function parseMarkdownWithMeta(raw) {
+      const match = raw.match(/^---([\s\S]+?)---([\s\S]*)$/);
+      if (!match) return { meta: {}, body: raw };
+      try {
+        return { meta: jsyaml.load(match[1]), body: match[2] };
+      } catch (e) {
+        return { meta: {}, body: raw };
+      }
+    }
+
+    async function init() {
+      const params = new URLSearchParams(window.location.search);
+      const postSlug = params.get('post');
+
+      try {
+        if (postSlug) {
+          const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/content/blog/${postSlug}`;
+          const res = await fetch(rawUrl);
+          if (!res.ok) throw new Error("Blog post load nahi ho paya");
+          const text = await res.text();
+          const { meta, body } = parseMarkdownWithMeta(text);
+
+          document.getElementById('post-title').innerText = meta.title || postSlug.replace('.md', '');
+          document.getElementById('post-date').innerText = meta.date ? new Date(meta.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+          document.getElementById('post-content').innerHTML = marked.parse(body);
+
+          document.getElementById('loading').classList.add('hidden');
+          document.getElementById('blog-post-view').classList.remove('hidden');
+        } else {
+          const apiUrl = `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/content/blog?ref=${BRANCH}`;
+          const res = await fetch(apiUrl);
+          const files = await res.json();
+
+          const mdFiles = files.filter(f => f.name.endsWith('.md'));
+          const container = document.getElementById('posts-container');
+
+          for (const file of mdFiles) {
+            const fileDataRes = await fetch(file.download_url);
+            const fileRaw = await fileDataRes.text();
+            const { meta } = parseMarkdownWithMeta(fileRaw);
+
+            const card = document.createElement('div');
+            card.className = "bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition flex flex-col justify-between";
+            card.innerHTML = `
+              <div>
+                <span class="text-xs font-semibold text-amber-600 bg-amber-50 px-2 py-1 rounded-md">UP Solar</span>
+                <h2 class="text-lg font-bold text-gray-900 mt-3 mb-2 line-clamp-2">${meta.title || file.name}</h2>
+                <p class="text-sm text-gray-500 line-clamp-3 mb-4">${meta.excerpt || 'Poora article padhne ke liye click karein.'}</p>
+              </div>
+              <a href="/blog.html?post=${encodeURIComponent(file.name)}" class="text-amber-600 font-bold text-sm hover:underline inline-flex items-center">
+                Read Article →
+              </a>
+            `;
+            container.appendChild(card);
+          }
+
+          document.getElementById('loading').classList.add('hidden');
+          document.getElementById('blog-list-view').classList.remove('hidden');
+        }
+      } catch (err) {
+        document.getElementById('loading').innerHTML = `<p class="text-red-500">Error: ${err.message}</p>`;
+      }
+    }
+
+    init();
+  </script>
 </body>
 </html>
