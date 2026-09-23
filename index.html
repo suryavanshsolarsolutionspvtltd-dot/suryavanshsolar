@@ -1,372 +1,354 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Suryavansh Solar Solutions | PM Surya Ghar Authorized Partner</title>
-  <meta name="description" content="Authorized UPNEDA vendor & PM Surya Ghar solar EPC provider in Uttar Pradesh. High efficiency on-grid, hybrid, and commercial solar installations." />
+  <title>Suryavansh Solar Solutions | Rooftop Solar EPC & Subsidy Experts</title>
+  <meta name="description" content="Suryavansh Solar Solutions Private Limited provides on-grid, hybrid rooftop solar installations, PM Surya Ghar subsidy support, and commercial solar EPC services across Uttar Pradesh." />
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
           colors: {
-            solar: { 500: '#f59e0b', 600: '#d97706' },
-            brand: { 900: '#0f172a', 800: '#1e293b', 700: '#334155' }
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              dark: '#0a0f1d',
+              card: '#111827',
+              emerald: '#059669'
+            }
           }
         }
       }
     }
   </script>
-
   <style>
-    /* Mobile-first touch slider styling */
+    /* Custom Slider Styling for smooth mobile and desktop touch drag */
     input[type=range] {
       -webkit-appearance: none;
       width: 100%;
-      height: 12px;
-      background: #334155;
-      border-radius: 6px;
+      background: #374151;
+      height: 8px;
+      border-radius: 9999px;
       outline: none;
-      margin: 12px 0;
     }
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
       appearance: none;
-      width: 32px;
-      height: 32px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: #f59e0b;
       cursor: pointer;
-      border: 3px solid #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      border: 3px solid #111827;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
     }
     input[type=range]::-moz-range-thumb {
-      width: 32px;
-      height: 32px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: #f59e0b;
       cursor: pointer;
-      border: 3px solid #ffffff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      border: 3px solid #111827;
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
     }
   </style>
-
-  <!-- Netlify Identity Widget -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased font-sans flex flex-col min-h-screen">
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-amber-500 selection:text-white">
 
-  <!-- TOP BAR -->
-  <div class="bg-brand-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span class="text-[11px] sm:text-xs">UPNEDA Empanelled Vendor | PM Surya Ghar Authorized</span>
-      </div>
-      <div class="flex items-center gap-4 text-[11px] sm:text-xs">
-        <a href="https://wa.me/918630019376" target="_blank" class="text-emerald-400 font-bold hover:underline">
-          💬 WhatsApp: +91 86300 19376
-        </a>
-        <a href="https://wa.me/919548782862" target="_blank" class="text-amber-400 font-bold hover:underline">
-          📞 Call: +91 95487 82862
-        </a>
-      </div>
-    </div>
-  </div>
+  <!-- Floating WhatsApp Action -->
+  <a href="https://wa.me/919548782862?text=Hello%20Suryavansh%20Solar,%20I%20am%20interested%20in%20a%20rooftop%20solar%20system." 
+     target="_blank" 
+     rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition transform hover:scale-110 active:scale-95"
+     title="Chat with us on WhatsApp">
+    <i data-lucide="message-circle" class="w-8 h-8"></i>
+  </a>
 
-  <!-- NAVIGATION -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="flex justify-between items-center h-16">
-        <a href="/" class="flex items-center gap-2.5">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-brand-900 font-black text-lg shadow-sm">
-            S
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-800 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#home" class="flex items-center space-x-3">
+          <div class="p-2.5 bg-amber-500 rounded-xl text-slate-950 font-black">
+            <span class="text-xl tracking-tighter">SS</span>
           </div>
           <div>
-            <div class="text-sm font-extrabold tracking-tight text-brand-900 leading-none">SURYAVANSH</div>
-            <div class="text-[9px] font-bold text-amber-600 tracking-wider">SOLAR SOLUTIONS</div>
+            <span class="text-lg sm:text-xl font-black tracking-tight text-white block leading-tight">SURYAVANSH</span>
+            <span class="text-[10px] font-bold text-amber-500 uppercase tracking-widest block">Solar Solutions Pvt. Ltd.</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-700">
-          <a href="#calculator" class="hover:text-amber-600">Subsidy Calculator</a>
-          <a href="/blog.html" style="font-weight: 600; color: #0f172a; text-decoration: none; margin: 0 10px;">Subsidy Guide</a>
-          <a href="#products" class="hover:text-amber-600">Our Products</a>
-          <a href="#contact" class="hover:text-amber-600">Contact</a>
-          <a href="/admin/" class="text-xs px-2.5 py-1 rounded bg-slate-100 text-slate-600 hover:text-slate-900">Admin</a>
-          <a href="https://wa.me/918630019376?text=Hi%2C%20I%20want%20to%20book%20a%20solar%20site%20survey." target="_blank" class="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-lg shadow-sm">
-            Book Site Survey
+        <!-- Desktop Navigation Items -->
+        <nav class="hidden md:flex items-center space-x-7 text-xs font-bold tracking-wide uppercase text-slate-300">
+          <a href="#calculator" class="hover:text-amber-400 transition flex items-center space-x-1.5">
+            <i data-lucide="calculator" class="w-4 h-4 text-amber-500"></i>
+            <span>Subsidy Calculator</span>
+          </a>
+          <a href="#products" class="hover:text-amber-400 transition flex items-center space-x-1.5">
+            <i data-lucide="box" class="w-4 h-4 text-amber-500"></i>
+            <span>Our Products</span>
+          </a>
+          <!-- Replaced Subsidy Guide with Blog Icon & Link -->
+          <a href="#blog" class="hover:text-amber-400 transition flex items-center space-x-1.5 text-amber-400">
+            <i data-lucide="newspaper" class="w-4 h-4 text-amber-400"></i>
+            <span>Blog</span>
+          </a>
+          <a href="#contact" class="hover:text-amber-400 transition flex items-center space-x-1.5">
+            <i data-lucide="phone" class="w-4 h-4 text-amber-500"></i>
+            <span>Contact</span>
           </a>
         </nav>
 
-        <!-- Mobile Menu Button -->
-        <button type="button" onclick="toggleMenu()" class="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg text-lg font-bold">
-          ☰
-        </button>
-      </div>
-
-      <!-- Mobile Dropdown -->
-      <div id="mobile-menu" class="hidden md:hidden py-3 border-t border-slate-100 flex flex-col gap-2.5 text-sm">
-        <a href="#calculator" onclick="toggleMenu()" class="px-2 py-1 text-slate-800 font-medium">Subsidy Calculator</a>
-        <a href="#products" onclick="toggleMenu()" class="px-2 py-1 text-slate-800 font-medium">Our Products</a>
-        <a href="#contact" onclick="toggleMenu()" class="px-2 py-1 text-slate-800 font-medium">Contact Details</a>
-        <a href="/admin/" class="px-2 py-1 text-slate-800 font-medium">CMS Admin Login</a>
-        <a href="https://wa.me/918630019376" target="_blank" class="text-center py-2 bg-amber-500 text-white font-bold rounded-lg mt-1">Book Site Survey</a>
+        <!-- CTA Header Buttons -->
+        <div class="flex items-center space-x-3">
+          <a href="#calculator" class="px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs sm:text-sm font-black shadow-md shadow-amber-500/20 transition flex items-center space-x-2">
+            <span>Book Site Survey</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
-  <section class="bg-gradient-to-b from-amber-50/70 to-white py-10 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+  <!-- Badges Ribbon -->
+  <div class="bg-slate-950 border-b border-slate-800 py-3">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-3 gap-2 text-center text-xs font-semibold">
+      <div class="border-r border-slate-800 flex flex-col items-center justify-center">
+        <span class="text-base sm:text-lg font-black text-amber-400">25 Yrs</span>
+        <span class="text-[10px] text-slate-400">Performance Warranty</span>
+      </div>
+      <div class="border-r border-slate-800 flex flex-col items-center justify-center">
+        <span class="text-base sm:text-lg font-black text-emerald-400">₹1.08L</span>
+        <span class="text-[10px] text-slate-400">Max UP Subsidy</span>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <span class="text-base sm:text-lg font-black text-white">UPNEDA</span>
+        <span class="text-[10px] text-slate-400">Empanelled Partner</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero & Quick Form Section -->
+  <section id="home" class="py-12 bg-slate-900">
+    <div class="max-w-xl mx-auto px-4">
+      <div class="bg-white text-slate-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-slate-200">
+        <h2 class="text-xl font-black text-slate-950">Book Free Site Survey</h2>
+        <p class="text-xs text-slate-500 mt-1 mb-6">Expert technical evaluation without technical jargon or commitment.</p>
         
-        <!-- Left Hero Copy -->
-        <div class="lg:col-span-7 space-y-5 text-left">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 border border-amber-300 rounded-full text-[11px] font-bold text-amber-800">
-            ☀️ PM SURYA GHAR: MUFT BIJLI YOJANA
+        <form onsubmit="handleLeadSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Full Name</label>
+            <input type="text" id="leadName" required placeholder="Enter your full name" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-slate-50" />
           </div>
-
-          <h1 class="text-2xl sm:text-4xl font-extrabold text-brand-900 tracking-tight leading-tight">
-            Slash Your Electricity Bills Up To <span class="text-amber-500 underline decoration-amber-300">90%</span> With Rooftop Solar.
-          </h1>
-
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Residential, commercial, and MSME solar installations in Uttar Pradesh. Tier-1 DCR solar panels, Net-Metering clearances, and up to <strong class="text-slate-900 font-semibold">₹1,08,000 direct subsidy</strong>.
-          </p>
-
-          <div class="grid grid-cols-3 gap-2.5 pt-1">
-            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm text-center">
-              <div class="text-lg sm:text-2xl font-black text-brand-900">25 Yrs</div>
-              <div class="text-[10px] sm:text-xs text-slate-500">Panel Warranty</div>
-            </div>
-            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm text-center">
-              <div class="text-lg sm:text-2xl font-black text-amber-500">₹1.08L</div>
-              <div class="text-[10px] sm:text-xs text-slate-500">Max UP Subsidy</div>
-            </div>
-            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm text-center">
-              <div class="text-lg sm:text-2xl font-black text-emerald-600">UPNEDA</div>
-              <div class="text-[10px] sm:text-xs text-slate-500">Empanelled EPC</div>
-            </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Mobile Number</label>
+            <input type="tel" id="leadPhone" required placeholder="Phone number" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-slate-50" />
           </div>
-        </div>
-
-        <!-- Right Hero Form -->
-        <div class="lg:col-span-5" id="contact">
-          <div class="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-xl">
-            <h3 class="text-base sm:text-lg font-bold text-brand-900 mb-1">Book Free Site Survey</h3>
-            <p class="text-xs text-slate-500 mb-4">Enter details to chat instantly with our technical engineers on WhatsApp.</p>
-
-            <form onsubmit="handleHeroSubmit(event)" class="space-y-3">
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
-                <input type="text" id="lead-name" required placeholder="Enter your full name" class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile Number</label>
-                <input type="tel" id="lead-phone" required placeholder="Phone number" class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1">City / District (UP)</label>
-                <input type="text" id="lead-city" required placeholder="e.g. Amroha, Moradabad, Sambhal" class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400" />
-              </div>
-
-              <div>
-                <label class="block text-xs font-semibold text-slate-700 mb-1">Monthly Electricity Bill</label>
-                <select id="lead-bill" class="w-full px-3.5 py-2 text-sm rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white">
-                  <option value="₹1,500 - ₹3,000">₹1,500 - ₹3,000 / month</option>
-                  <option value="₹3,000 - ₹6,000" selected>₹3,000 - ₹6,000 / month</option>
-                  <option value="₹6,000 - ₹12,000">₹6,000 - ₹12,000 / month</option>
-                  <option value="Above ₹12,000">Above ₹12,000 / month (Commercial)</option>
-                </select>
-              </div>
-
-              <button type="submit" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition">
-                Submit & Open on WhatsApp 💬
-              </button>
-            </form>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">City / District (UP)</label>
+            <input type="text" id="leadCity" required placeholder="e.g. Amroha, Moradabad, Sambhal" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-slate-50" />
           </div>
-        </div>
-
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 uppercase mb-1">Monthly Electricity Bill</label>
+            <select id="leadBill" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-amber-500 bg-slate-50">
+              <option value="₹1,500 - ₹3,000 / month">₹1,500 - ₹3,000 / month</option>
+              <option value="₹3,000 - ₹5,000 / month" selected>₹3,000 - ₹5,000 / month</option>
+              <option value="₹5,000 - ₹10,000 / month">₹5,000 - ₹10,000 / month</option>
+              <option value="Above ₹10,000 / month">Above ₹10,000 / month</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition flex items-center justify-center space-x-2 text-sm">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span>Submit & Open on WhatsApp</span>
+          </button>
+        </form>
       </div>
     </div>
   </section>
 
-  <!-- CALCULATOR SECTION -->
-  <section class="py-12 bg-brand-900 text-white" id="calculator">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-xl mx-auto mb-8">
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">UP Subsidy Estimator</span>
-        <h2 class="text-xl sm:text-3xl font-extrabold mt-1">Calculate Your Solar Savings</h2>
-        <p class="text-slate-400 text-xs mt-1.5">Slide or tap amounts below to calculate your required plant capacity and direct subsidy.</p>
+  <!-- Interactive Rooftop Solar Calculator -->
+  <section id="calculator" class="py-16 bg-slate-950 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold tracking-widest uppercase text-amber-400">UP Subsidy Estimator</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Calculate Your Solar Savings</h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-1">Slash up to 90% power bills with on-grid net metering under PM Surya Ghar & UPNEDA.</p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 max-w-5xl mx-auto">
-        
-        <!-- Interactive Controller Box -->
-        <div class="lg:col-span-6 bg-brand-800 p-5 sm:p-6 rounded-2xl border border-slate-700 space-y-4">
-          <div class="flex justify-between items-center">
-            <span class="text-xs sm:text-sm text-slate-300 font-medium">Monthly Power Bill</span>
-            <span id="bill-label" class="text-2xl sm:text-3xl font-black text-amber-400">₹3,500</span>
-          </div>
+      <!-- Main Calculator Card -->
+      <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <!-- Bill Header & Live Display -->
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-sm font-semibold text-slate-300">Monthly Power Bill</span>
+          <span id="billVal" class="text-2xl sm:text-3xl font-black text-amber-400">₹3,500</span>
+        </div>
 
-          <!-- Native Slider with Direct Inline Handlers -->
-          <div>
-            <input 
-              type="range" 
-              id="bill-range" 
-              min="1000" 
-              max="15000" 
-              step="500" 
-              value="3500" 
-              oninput="runCalculator(this.value)"
-              onchange="runCalculator(this.value)"
-              class="w-full cursor-pointer" 
-            />
-          </div>
+        <!-- Slider Bar -->
+        <div class="py-2">
+          <input 
+            type="range" 
+            id="solarSlider" 
+            min="1000" 
+            max="25000" 
+            step="100" 
+            value="3500" 
+            class="w-full cursor-pointer"
+          />
+        </div>
 
-          <!-- Tap Increment / Decrement Steppers -->
-          <div class="flex items-center gap-2">
-            <button type="button" onclick="stepCalculator(-500)" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition">
-              − ₹500
-            </button>
-            <button type="button" onclick="stepCalculator(500)" class="flex-1 py-2.5 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded-lg text-xs font-bold text-slate-100 active:text-brand-900 transition">
-              + ₹500
-            </button>
-          </div>
+        <!-- Stepper Buttons (-500 / +500) -->
+        <div class="flex items-center justify-between gap-3 mt-4">
+          <button type="button" onclick="adjustBill(-500)" class="w-1/2 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-bold text-slate-200 transition">
+            - ₹500
+          </button>
+          <button type="button" onclick="adjustBill(500)" class="w-1/2 py-2.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl text-xs font-bold text-slate-200 transition">
+            + ₹500
+          </button>
+        </div>
 
-          <!-- Quick Select Buttons -->
-          <div class="pt-1">
-            <div class="text-[10px] text-slate-400 uppercase font-semibold mb-1.5">Quick Presets:</div>
-            <div class="grid grid-cols-4 gap-1.5">
-              <button type="button" onclick="runCalculator(2000)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹2,000</button>
-              <button type="button" onclick="runCalculator(3500)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹3,500</button>
-              <button type="button" onclick="runCalculator(6000)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹6,000</button>
-              <button type="button" onclick="runCalculator(10000)" class="py-2 bg-slate-700 hover:bg-slate-600 active:bg-amber-500 rounded text-xs font-semibold text-slate-200">₹10,000</button>
-            </div>
-          </div>
+        <!-- Quick Preset Buttons -->
+        <div class="grid grid-cols-4 gap-2 mt-4">
+          <button type="button" onclick="setBill(1500)" class="py-2 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 border border-slate-700 rounded-lg text-xs font-bold text-slate-300 transition">₹1,500</button>
+          <button type="button" onclick="setBill(3500)" class="py-2 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 border border-slate-700 rounded-lg text-xs font-bold text-slate-300 transition">₹3,500</button>
+          <button type="button" onclick="setBill(5000)" class="py-2 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 border border-slate-700 rounded-lg text-xs font-bold text-slate-300 transition">₹5,000</button>
+          <button type="button" onclick="setBill(10000)" class="py-2 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 border border-slate-700 rounded-lg text-xs font-bold text-slate-300 transition">₹10,000</button>
+        </div>
 
-          <!-- Subsidy Breakdown -->
-          <div class="p-3.5 bg-brand-900/80 rounded-xl border border-slate-700 space-y-1.5 text-xs">
-            <div class="flex justify-between text-slate-300">
-              <span>Central Subsidy (PM Surya Ghar):</span>
-              <span id="calc-central" class="font-bold text-amber-300">₹78,000</span>
-            </div>
-            <div class="flex justify-between text-slate-300">
-              <span>UP State Subsidy (UPNEDA):</span>
-              <span id="calc-state" class="font-bold text-amber-300">₹30,000</span>
-            </div>
+        <!-- Subsidy Breakdown Details -->
+        <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 mt-6 space-y-2 text-xs">
+          <div class="flex justify-between text-slate-400">
+            <span>Central Subsidy (PM Surya Ghar)</span>
+            <span id="resCentral" class="font-bold text-slate-200">₹78,000</span>
           </div>
+          <div class="flex justify-between text-slate-400">
+            <span>UP State Subsidy (UPNEDA)</span>
+            <span id="resState" class="font-bold text-slate-200">₹30,000</span>
+          </div>
+        </div>
 
-          <a id="calc-whatsapp-btn" href="https://wa.me/918630019376" target="_blank" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold rounded-lg text-center flex items-center justify-center gap-2 shadow transition">
-            💬 Claim This Subsidy on WhatsApp
+        <!-- Direct WhatsApp Lead Trigger -->
+        <div class="mt-6">
+          <a id="calcWaBtn" href="#" target="_blank" class="w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl flex items-center justify-center space-x-2 text-sm shadow-lg transition">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Claim This Subsidy on WhatsApp</span>
           </a>
         </div>
 
-        <!-- Metric Cards 2x2 Grid -->
-        <div class="lg:col-span-6 grid grid-cols-2 gap-3">
-          <div class="bg-brand-800 p-4 rounded-xl border border-slate-700">
-            <div class="text-[10px] text-slate-400 uppercase font-bold">Plant Capacity</div>
-            <div id="calc-kw" class="text-xl sm:text-2xl font-black text-amber-400 mt-1">3.0 kW</div>
-            <div class="text-[10px] text-slate-400">DCR Mono PERC</div>
+        <!-- Key Result Metrics -->
+        <div class="grid grid-cols-2 gap-4 mt-6">
+          <div class="bg-slate-950/90 border border-slate-800 p-4 rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Plant Capacity</span>
+            <span id="resKw" class="text-2xl font-black text-amber-400 mt-1 block">3.0 kW</span>
           </div>
-
-          <div class="bg-brand-800 p-4 rounded-xl border border-slate-700">
-            <div class="text-[10px] text-slate-400 uppercase font-bold">Roof Area</div>
-            <div id="calc-area" class="text-xl sm:text-2xl font-black text-white mt-1">300 sq.ft</div>
-            <div class="text-[10px] text-slate-400">Shadow-free</div>
+          <div class="bg-slate-950/90 border border-slate-800 p-4 rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Roof Area</span>
+            <span id="resSqft" class="text-2xl font-black text-white mt-1 block">300 sq.ft</span>
           </div>
-
-          <div class="bg-brand-800 p-4 rounded-xl border border-slate-700">
-            <div class="text-[10px] text-slate-400 uppercase font-bold">Total Subsidy</div>
-            <div id="calc-subsidy" class="text-xl sm:text-2xl font-black text-emerald-400 mt-1">₹1,08,000</div>
-            <div class="text-[10px] text-slate-400">Direct DBT Credit</div>
+          <div class="bg-slate-950/90 border border-slate-800 p-4 rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Total Subsidy</span>
+            <span id="resTotalSub" class="text-2xl font-black text-emerald-400 mt-1 block">₹1,08,000</span>
           </div>
-
-          <div class="bg-brand-800 p-4 rounded-xl border border-slate-700">
-            <div class="text-[10px] text-slate-400 uppercase font-bold">Annual Saving</div>
-            <div id="calc-savings" class="text-xl sm:text-2xl font-black text-amber-400 mt-1">₹42,000 / yr</div>
-            <div class="text-[10px] text-slate-400">Est. generation</div>
+          <div class="bg-slate-950/90 border border-slate-800 p-4 rounded-2xl">
+            <span class="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Annual Savings</span>
+            <span id="resSavings" class="text-2xl font-black text-white mt-1 block">₹39,900 / yr</span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- PRODUCTS SECTION -->
-  <section class="py-14 bg-white" id="products">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      
-      <div class="text-center max-w-xl mx-auto mb-10">
-        <span class="text-amber-600 text-xs font-bold uppercase tracking-wider">Engineered Range</span>
-        <h2 class="text-2xl font-extrabold text-brand-900 mt-1">Our Solar Products & Services</h2>
-        <p class="text-slate-600 text-xs mt-1.5">Tier-1 solar systems engineered for high efficiency and maximum longevity.</p>
+  <!-- Products & Turnkey EPC Solutions -->
+  <section id="products" class="py-16 bg-slate-900 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-amber-500">Engineered Range</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Our Solar Products & Services</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Product 1 -->
-        <div class="flex flex-col bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">
-            🏠
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+          <div>
+            <div class="w-10 h-10 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="home" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">On-Grid Rooftop Systems</h3>
+            <span class="text-[11px] font-bold text-amber-500 uppercase block mb-3">1 kW to 10 kW Residential</span>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Direct connection with bi-directional net metering. Feed excess units back to the state electricity grid.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-300">
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Eligible for ₹1,08,000 UP/Govt Subsidy</span></li>
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>25-Year panel power warranty</span></li>
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Zero battery maintenance required</span></li>
+            </ul>
           </div>
-          <h3 class="text-base font-bold text-brand-900 mb-0.5">On-Grid Rooftop Systems</h3>
-          <span class="text-[11px] font-semibold text-amber-600 mb-2">1 kW to 10 kW Residential</span>
-          <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-            Syncs with the local grid. Excess power is exported through bi-directional Net Metering to offset monthly electricity bills.
-          </p>
-          <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5 text-xs text-slate-700">
-            <div>✓ Eligible for up to ₹1,08,000 subsidy</div>
-            <div>✓ 25-Year linear panel warranty</div>
-            <div>✓ Zero battery maintenance required</div>
-          </div>
-          <a href="https://wa.me/918630019376?text=I%20am%20interested%20in%20an%20On-Grid%20Rooftop%20Solar%20System." target="_blank" class="mt-4 block w-full text-center py-2 bg-brand-900 hover:bg-brand-800 text-white text-xs font-bold rounded-lg transition">
+          <a href="https://wa.me/919548782862?text=Hello,%20I%20am%20interested%20in%20an%20On-Grid%20Rooftop%20System." target="_blank" class="mt-6 block w-full py-2.5 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white text-center text-xs font-bold rounded-xl transition">
             Inquire for On-Grid
           </a>
         </div>
 
-        <!-- Product 2 -->
-        <div class="flex flex-col bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">
-            🔋
+        <!-- Card 2 -->
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+          <div>
+            <div class="w-10 h-10 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="battery-charging" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Hybrid & Off-Grid Solar</h3>
+            <span class="text-[11px] font-bold text-amber-500 uppercase block mb-3">Lithium / Tubular Storage</span>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Combines solar power generation with energy storage for complete uninterrupted power during outages.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-300">
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>100% protection from power cuts</span></li>
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Smart MPPT hybrid solar inverters</span></li>
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Flexible use with grid or battery</span></li>
+            </ul>
           </div>
-          <h3 class="text-base font-bold text-brand-900 mb-0.5">Hybrid & Off-Grid Solar</h3>
-          <span class="text-[11px] font-semibold text-amber-600 mb-2">Lithium / Tubular Storage</span>
-          <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-            Combines rooftop solar power with heavy-duty battery storage to provide uninterrupted power during grid outages.
-          </p>
-          <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5 text-xs text-slate-700">
-            <div>✓ 100% protection from power cuts</div>
-            <div>✓ Smart MPPT hybrid solar inverters</div>
-            <div>✓ Prioritizes solar over grid & battery</div>
-          </div>
-          <a href="https://wa.me/919548782862?text=I%20am%20interested%20in%20a%20Hybrid%20Off-Grid%20Solar%20System." target="_blank" class="mt-4 block w-full text-center py-2 bg-brand-900 hover:bg-brand-800 text-white text-xs font-bold rounded-lg transition">
+          <a href="https://wa.me/919548782862?text=Hello,%20I%20am%20interested%20in%20a%20Hybrid/Off-Grid%20Solar%20System." target="_blank" class="mt-6 block w-full py-2.5 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white text-center text-xs font-bold rounded-xl transition">
             Inquire for Hybrid
           </a>
         </div>
 
-        <!-- Product 3 -->
-        <div class="flex flex-col bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm">
-          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold mb-3 text-lg">
-            🏭
+        <!-- Card 3 -->
+        <div class="bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/50 transition">
+          <div>
+            <div class="w-10 h-10 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-4">
+              <i data-lucide="factory" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-1">Commercial & MSME EPC</h3>
+            <span class="text-[11px] font-bold text-amber-500 uppercase block mb-3">10 kW to 500 kW Plants</span>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Customized solar plants for cold storages, petrol pumps, schools, and manufacturing units.
+            </p>
+            <ul class="text-xs space-y-2 text-slate-300">
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Accelerated depreciation tax benefits</span></li>
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Heavy-duty HDGI wind-resistant frames</span></li>
+              <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500"></i><span>Fast commercial payback within 3-4 years</span></li>
+            </ul>
           </div>
-          <h3 class="text-base font-bold text-brand-900 mb-0.5">Commercial & MSME EPC</h3>
-          <span class="text-[11px] font-semibold text-amber-600 mb-2">10 kW to 500 kW Plants</span>
-          <p class="text-xs text-slate-600 leading-relaxed flex-grow">
-            Tailored for factories, cold storages, petrol pumps, schools, and hospitals across Uttar Pradesh.
-          </p>
-          <div class="border-t border-slate-200 pt-3 mt-3 space-y-1.5 text-xs text-slate-700"
+          <a href="https://wa.me/919548782862?text=Hello,%20I%20need%20a%20Commercial/MSME%20Solar%20EPC%20quotation." target="_blank" class="mt-6 block w-full py-2.5 bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-white text-center text-xs font-bold rounded-xl transition">
+            Inquire for Commercial
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog / Knowledge Section -->
+  <section id="blog" class="py-16 bg-slate-950 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-amber-500">Articles & Insights</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Solar Knowledge Blog</h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-1">Guides, subsidy policies, an
